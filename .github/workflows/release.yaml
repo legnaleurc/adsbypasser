@@ -47,7 +47,7 @@ jobs:
         env:
           TAG_NAME: ${{ github.ref_name }}
           SOURCE_DIR: ./dist/ghpages
-          TARGET_REPO: adsbypasser/adsbypasser.github.io
+          TARGET_REPO: ${{ vars.TARGET_REPO || 'adsbypasser/adsbypasser.github.io' }}
           TARGET_REPO_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Create GitHub Release
