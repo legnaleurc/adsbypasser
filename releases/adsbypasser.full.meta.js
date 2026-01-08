@@ -135,6 +135,7 @@
 // @match          *://*.imgtaxi.com/*
 // @match          *://*.imgtraffic.com/*
 // @match          *://*.imgwallet.com/*
+// @match          *://*.imgxxt.in/*
 // @match          *://*.imx.to/*
 // @match          *://*.indishare.org/*
 // @match          *://*.infidrive.net/*
