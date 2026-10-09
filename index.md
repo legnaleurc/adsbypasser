@@ -19,8 +19,8 @@ need more information.
 
 # Nightly Builds
 
-Nightly builds are generated automatically from every commit to the `master`
-branch, so they include the latest site fixes before the next release.
+Nightly builds are generated automatically from the latest source code, so they
+include the latest site fixes before the next release.
 They are not reviewed as a release and **may break things**.
 If something goes wrong, please report it on [GitHub] with the nightly version
 number.
