@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {% seo %}
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div id="header">
+      <nav>
+        <ul>
+          <li class="fork">
+            <a href="https://github.com/adsbypasser/adsbypasser"
+              >View On GitHub</a
+            >
+          </li>
+          <li class="downloads">
+            <a
+              href="https://github.com/adsbypasser/adsbypasser/issues"
+              rel="external"
+              >Report Bug</a
+            >
+          </li>
+          <li class="downloads">
+            <a href="{{ '/configure.html' | relative_url }}">Configure</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end header -->
+
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>{{ site.title }}</h1>
+          <p>{{ site.description }}</p>
+          <hr />
+          <span class="credits left"
+            >Project maintained by
+            <a href="https://github.com/adsbypasser">adsbypasser</a></span
+          >
+          <span class="credits right"
+            >Hosted on GitHub Pages &mdash; Theme by
+            <a href="https://twitter.com/mattgraham">mattgraham</a></span
+          >
+        </div>
+
+        <!-- Installation links -->
+        <div id="install">
+          <div class="channel release">
+            <h2>Release <span class="tag">Recommended</span></h2>
+            <p>Stable builds, updated when a new version is published.</p>
+            <div class="buttons">
+              <a
+                class="button"
+                href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
+                >Install Full</a
+              >
+              <a
+                class="button"
+                href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
+                >Install Lite</a
+              >
+            </div>
+          </div>
+
+          <div class="channel nightly">
+            <h2>Nightly <span class="tag">Unstable</span></h2>
+            <p>
+              Built from every commit to <code>master</code>.
+              <a href="#nightly-builds">Read before installing</a>.
+            </p>
+            <div class="buttons">
+              <a
+                class="button"
+                href="{{ '/nightly/' | append: site.data.urls.full | relative_url }}"
+                >Install Full Nightly</a
+              >
+              <a
+                class="button"
+                href="{{ '/nightly/' | append: site.data.urls.lite | relative_url }}"
+                >Install Lite Nightly</a
+              >
+            </div>
+          </div>
+        </div>
+
+        {{ content }}
+      </section>
+    </div>
+  </body>
+</html>

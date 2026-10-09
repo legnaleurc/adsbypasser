@@ -1,0 +1,92 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Installation channels for AdsBypasser */
+#install {
+  margin: 0 0 50px 0;
+
+  .channel {
+    margin: 0 0 20px 0;
+    padding: 15px 20px 20px 20px;
+    border-radius: 4px;
+    background: #2a2a2a;
+
+    h2 {
+      margin: 0 0 5px 0;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 0 0 15px 0;
+      font-size: 14px;
+    }
+
+    .tag {
+      margin-left: 6px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      color: #222;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    a.button {
+      flex: 1 1 200px;
+      padding: 10px 0;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+  }
+
+  /* Release channel: the theme's green */
+  .release {
+    border: 1px solid #5d910b;
+    border-left-width: 6px;
+
+    .tag {
+      background: #93bd20;
+    }
+
+    a.button {
+      border: 1px solid #5d910b;
+      background: linear-gradient(#93bd20, #659e10);
+
+      &:hover {
+        background: linear-gradient(#749619, #527f0e);
+      }
+    }
+  }
+
+  /* Nightly channel: amber with a dashed outline to stand apart */
+  .nightly {
+    border: 1px dashed #c47f00;
+    border-left: 6px solid #c47f00;
+
+    .tag {
+      background: #ffb000;
+    }
+
+    a.button {
+      border: 1px solid #a86d00;
+      background: linear-gradient(#e89a00, #b87400);
+
+      &:hover {
+        background: linear-gradient(#c78400, #965f00);
+      }
+    }
+  }
+}
