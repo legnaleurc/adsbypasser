@@ -54,52 +54,105 @@
 
         <!-- Installation links -->
         <div id="install">
-          <dl class="editions">
-            <dt>Full</dt>
-            <dd>All supported sites, including image-hosting sites.</dd>
-            <dt>Lite</dt>
-            <dd>
-              Same as Full, but without image-hosting sites. Choose this if you
-              use another userscript for image-hosting sites.
-            </dd>
-          </dl>
-
-          <div class="channel release">
-            <h2>Release <span class="tag">Recommended</span></h2>
-            <p>Stable builds, updated when a new version is published.</p>
-            <div class="buttons">
-              <a
-                class="button"
-                href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
-                >Install Full</a
-              >
-              <a
-                class="button"
-                href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
-                >Install Lite</a
-              >
-            </div>
-          </div>
-
-          <div class="channel nightly">
-            <h2>Nightly <span class="tag">Unstable</span></h2>
-            <p>
-              Built from every commit to <code>master</code>.
-              <a href="#nightly-builds">Read before installing</a>.
-            </p>
-            <div class="buttons">
-              <a
-                class="button"
-                href="{{ '/nightly/' | append: site.data.urls.full | relative_url }}"
-                >Install Full Nightly</a
-              >
-              <a
-                class="button"
-                href="{{ '/nightly/' | append: site.data.urls.lite | relative_url }}"
-                >Install Lite Nightly</a
-              >
-            </div>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">
+                  Full
+                  <span class="hint">
+                    <span class="help" tabindex="0" aria-describedby="tip-full"
+                      >?</span
+                    >
+                    <span class="tip" role="tooltip" id="tip-full"
+                      >All supported sites, including image-hosting sites.</span
+                    >
+                  </span>
+                </th>
+                <th scope="col">
+                  Lite
+                  <span class="hint end">
+                    <span class="help" tabindex="0" aria-describedby="tip-lite"
+                      >?</span
+                    >
+                    <span class="tip" role="tooltip" id="tip-lite"
+                      >Same as Full, but without image-hosting sites. Choose
+                      this if you use another userscript for image-hosting
+                      sites.</span
+                    >
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="release">
+                <th scope="row">
+                  Release
+                  <span class="hint start">
+                    <span
+                      class="help"
+                      tabindex="0"
+                      aria-describedby="tip-release"
+                      >?</span
+                    >
+                    <span class="tip" role="tooltip" id="tip-release"
+                      >Stable channel, recommended for most users. Updated when
+                      a new version is published.</span
+                    >
+                  </span>
+                </th>
+                <td>
+                  <a
+                    class="button"
+                    href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
+                    aria-label="Install Full release"
+                    >Install</a
+                  >
+                </td>
+                <td>
+                  <a
+                    class="button"
+                    href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
+                    aria-label="Install Lite release"
+                    >Install</a
+                  >
+                </td>
+              </tr>
+              <tr class="nightly">
+                <th scope="row">
+                  Nightly
+                  <span class="hint start">
+                    <span
+                      class="help"
+                      tabindex="0"
+                      aria-describedby="tip-nightly"
+                      >?</span
+                    >
+                    <span class="tip" role="tooltip" id="tip-nightly"
+                      >Beta channel, built from every commit to master. May
+                      break things, see Nightly Builds below.</span
+                    >
+                  </span>
+                </th>
+                <td>
+                  <a
+                    class="button"
+                    href="{{ '/nightly/' | append: site.data.urls.full | relative_url }}"
+                    aria-label="Install Full nightly"
+                    >Install</a
+                  >
+                </td>
+                <td>
+                  <a
+                    class="button"
+                    href="{{ '/nightly/' | append: site.data.urls.lite | relative_url }}"
+                    aria-label="Install Lite nightly"
+                    >Install</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         {{ content }}
