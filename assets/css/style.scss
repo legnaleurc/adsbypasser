@@ -15,7 +15,6 @@
   /* Release channel: the theme's green */
   --color-release: #93bd20;
   --color-release-dark: #659e10;
-  --color-release-border: #5d910b;
   --color-release-hover: #a6d12a;
   --color-release-hover-dark: #7fb51a;
 
@@ -24,7 +23,6 @@
   --color-nightly-button: #e89a00;
   --color-nightly-button-dark: #b87400;
   --color-nightly-border: #c47f00;
-  --color-nightly-button-border: #ffcc66;
   --color-nightly-hover: #ffb31a;
   --color-nightly-hover-dark: #d98c00;
 }
@@ -76,7 +74,6 @@
     }
 
     a.button {
-      border: 1px solid var(--color-release-border);
       background: linear-gradient(
         var(--color-release),
         var(--color-release-dark)
@@ -100,7 +97,6 @@
     }
 
     a.button {
-      border: 1px dashed var(--color-nightly-button-border);
       background: linear-gradient(
         var(--color-nightly-button),
         var(--color-nightly-button-dark)
