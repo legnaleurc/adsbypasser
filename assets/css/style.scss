@@ -38,8 +38,7 @@
     padding: 8px 0;
     border-radius: 4px;
     font-weight: bold;
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: #1c1c1c;
   }
 
   /* Release channel: the theme's green */
@@ -55,7 +54,7 @@
       background: linear-gradient(#93bd20, #659e10);
 
       &:hover {
-        background: linear-gradient(#749619, #527f0e);
+        background: linear-gradient(#a6d12a, #7fb51a);
       }
     }
   }
@@ -73,7 +72,7 @@
       background: linear-gradient(#e89a00, #b87400);
 
       &:hover {
-        background: linear-gradient(#c78400, #965f00);
+        background: linear-gradient(#ffb31a, #d98c00);
       }
     }
   }
