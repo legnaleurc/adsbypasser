@@ -11,9 +11,6 @@ This user script helps you to:
 
 It **CANNOT** help you to solve reCAPTCHAs.
 
-**Lite edition** removes image-hosting site support from **Full edition**.
-If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
-
 Any feature request or bug report is welcome.
 You could use [GitHub] to report issues or send pull requests.
 
@@ -32,9 +29,7 @@ number.
   they share the same name.
 * Once installed, it keeps updating from the nightly channel, even after a new
   release is published.
-* Its version looks like `X.Y.Z.YYYYMMDD.HHMMSS`, which is newer than the
-  `X.Y.Z` release it is based on.
-  To go back to release builds, uninstall the nightly build first, then install
+* To go back to release builds, uninstall the nightly build first, then install
   the release build.
 
 # Supported Platforms

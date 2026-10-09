@@ -7,6 +7,24 @@
 #install {
   margin: 0 0 50px 0;
 
+  /* Full vs Lite explanation above the channels */
+  .editions {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 15px;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+
+    dt {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
   .channel {
     margin: 0 0 20px 0;
     padding: 15px 20px 20px 20px;
