@@ -11,6 +11,8 @@
   --color-focus: #ffcc00;
   --color-tip-bg: #111;
   --color-tip-border: #434343;
+  --color-switch-bg: #2a2a2a;
+  --color-switch-border: #434343;
 
   /* Release channel: the theme's green */
   --color-release: #93bd20;
@@ -22,39 +24,94 @@
   --color-nightly: #ffb000;
   --color-nightly-button: #e89a00;
   --color-nightly-button-dark: #b87400;
-  --color-nightly-border: #c47f00;
   --color-nightly-hover: #ffb31a;
   --color-nightly-hover-dark: #d98c00;
 }
 
-/* Installation grid for AdsBypasser: channels x editions */
+/* Installation links for AdsBypasser: channel switch x editions */
 #install {
   margin: 0 0 50px 0;
 
-  table {
-    table-layout: fixed;
+  /* Release / Nightly segmented switch */
+  .switch {
+    display: flex;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+
+    legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    label {
+      flex: 1;
+      padding: 6px 0;
+      border: 1px solid var(--color-switch-border);
+      background: var(--color-switch-bg);
+      color: var(--color-text);
+      font-size: 15px;
+      text-align: center;
+      cursor: pointer;
+
+      &:first-of-type {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-of-type {
+        border-left: 0;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    input:focus-visible + label {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 1px;
+    }
+
+    #channel-release:checked + label {
+      background: var(--color-release);
+      color: var(--color-text-on-button);
+      font-weight: bold;
+    }
+
+    #channel-nightly:checked + label {
+      background: var(--color-nightly);
+      color: var(--color-text-on-button);
+      font-weight: bold;
+    }
   }
 
-  th,
-  td {
-    padding: 10px;
+  .note {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+
+    &.nightly {
+      color: var(--color-nightly);
+    }
+  }
+
+  .editions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .edition {
+    flex: 1;
     text-align: center;
-    vertical-align: middle;
   }
 
-  thead th {
-    color: var(--color-text);
+  .name {
+    margin: 0 0 6px 0;
     font-size: 16px;
-  }
-
-  tbody th {
-    width: 30%;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  tbody tr {
-    border-left: 4px solid transparent;
   }
 
   a.button {
@@ -63,17 +120,8 @@
     border-radius: 4px;
     font-weight: bold;
     color: var(--color-text-on-button);
-  }
 
-  /* Release channel: the theme's green */
-  .release {
-    border-left-color: var(--color-release-dark);
-
-    th {
-      color: var(--color-release);
-    }
-
-    a.button {
+    &.release {
       background: linear-gradient(
         var(--color-release),
         var(--color-release-dark)
@@ -86,17 +134,8 @@
         );
       }
     }
-  }
 
-  /* Nightly channel: amber with a dashed outline to stand apart */
-  .nightly {
-    border-left: 4px dashed var(--color-nightly-border);
-
-    th {
-      color: var(--color-nightly);
-    }
-
-    a.button {
+    &.nightly {
       background: linear-gradient(
         var(--color-nightly-button),
         var(--color-nightly-button-dark)
@@ -108,6 +147,24 @@
           var(--color-nightly-hover-dark)
         );
       }
+    }
+  }
+
+  /* Show only the selected channel; release is the default */
+  .nightly,
+  a.button.nightly {
+    display: none;
+  }
+
+  &:has(#channel-nightly:checked) {
+    .release,
+    a.button.release {
+      display: none;
+    }
+
+    .nightly,
+    a.button.nightly {
+      display: block;
     }
   }
 
