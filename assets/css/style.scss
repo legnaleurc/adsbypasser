@@ -3,6 +3,32 @@
 
 @import "{{ site.theme }}";
 
+/* Color palette, matching the midnight theme */
+:root {
+  /* Text and surfaces */
+  --color-text: #f0e7d5;
+  --color-text-on-button: #1c1c1c;
+  --color-focus: #ffcc00;
+  --color-tip-bg: #111;
+  --color-tip-border: #434343;
+
+  /* Release channel: the theme's green */
+  --color-release: #93bd20;
+  --color-release-dark: #659e10;
+  --color-release-border: #5d910b;
+  --color-release-hover: #a6d12a;
+  --color-release-hover-dark: #7fb51a;
+
+  /* Nightly channel: amber */
+  --color-nightly: #ffb000;
+  --color-nightly-button: #e89a00;
+  --color-nightly-button-dark: #b87400;
+  --color-nightly-border: #c47f00;
+  --color-nightly-button-border: #ffcc66;
+  --color-nightly-hover: #ffb31a;
+  --color-nightly-hover-dark: #d98c00;
+}
+
 /* Installation grid for AdsBypasser: channels x editions */
 #install {
   margin: 0 0 50px 0;
@@ -19,7 +45,7 @@
   }
 
   thead th {
-    color: #f0e7d5;
+    color: var(--color-text);
     font-size: 16px;
   }
 
@@ -38,41 +64,53 @@
     padding: 8px 0;
     border-radius: 4px;
     font-weight: bold;
-    color: #1c1c1c;
+    color: var(--color-text-on-button);
   }
 
   /* Release channel: the theme's green */
   .release {
-    border-left-color: #659e10;
+    border-left-color: var(--color-release-dark);
 
     th {
-      color: #93bd20;
+      color: var(--color-release);
     }
 
     a.button {
-      border: 1px solid #5d910b;
-      background: linear-gradient(#93bd20, #659e10);
+      border: 1px solid var(--color-release-border);
+      background: linear-gradient(
+        var(--color-release),
+        var(--color-release-dark)
+      );
 
       &:hover {
-        background: linear-gradient(#a6d12a, #7fb51a);
+        background: linear-gradient(
+          var(--color-release-hover),
+          var(--color-release-hover-dark)
+        );
       }
     }
   }
 
   /* Nightly channel: amber with a dashed outline to stand apart */
   .nightly {
-    border-left: 4px dashed #c47f00;
+    border-left: 4px dashed var(--color-nightly-border);
 
     th {
-      color: #ffb000;
+      color: var(--color-nightly);
     }
 
     a.button {
-      border: 1px dashed #ffcc66;
-      background: linear-gradient(#e89a00, #b87400);
+      border: 1px dashed var(--color-nightly-button-border);
+      background: linear-gradient(
+        var(--color-nightly-button),
+        var(--color-nightly-button-dark)
+      );
 
       &:hover {
-        background: linear-gradient(#ffb31a, #d98c00);
+        background: linear-gradient(
+          var(--color-nightly-hover),
+          var(--color-nightly-hover-dark)
+        );
       }
     }
   }
@@ -97,7 +135,7 @@
     opacity: 0.7;
 
     &:focus {
-      outline: 2px solid #ffcc00;
+      outline: 2px solid var(--color-focus);
       outline-offset: 1px;
     }
   }
@@ -112,11 +150,11 @@
     transform: translateX(-50%);
     width: 220px;
     padding: 8px 10px;
-    border: 1px solid #434343;
+    border: 1px solid var(--color-tip-border);
     border-radius: 4px;
-    background: #111;
+    background: var(--color-tip-bg);
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
-    color: #f0e7d5;
+    color: var(--color-text);
     font-family:
       "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
