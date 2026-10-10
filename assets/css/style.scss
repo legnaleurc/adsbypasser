@@ -28,6 +28,25 @@
   --color-nightly-hover-dark: #d98c00;
 }
 
+/* Header buttons: dark text and no border, like the install buttons */
+#header nav ul li a {
+  border: 0;
+  box-shadow: none;
+  background: linear-gradient(var(--color-release), var(--color-release-dark));
+  color: var(--color-text-on-button);
+  font-family:
+    "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  &:hover {
+    border: 0;
+    box-shadow: none;
+    background: linear-gradient(
+      var(--color-release-hover),
+      var(--color-release-hover-dark)
+    );
+  }
+}
+
 /* Installation links for AdsBypasser: channel switch x editions */
 #install {
   margin: 0 0 50px 0;
