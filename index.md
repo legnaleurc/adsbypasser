@@ -2,40 +2,40 @@
 layout: default
 ---
 
-# Feature
+# Features
 
-This user script helps you to:
+This userscript helps you:
 
-* skip countdown ads or continue pages.
-* prevent ad pop-up windows.
+* Skip countdown ads and continue pages.
+* Prevent ad pop-up windows from opening.
 
-It **CANNOT** help you to solve reCAPTCHAs.
+It **CANNOT** solve reCAPTCHAs.
 
-Any feature request or bug report is welcome.
-You could use [GitHub] to report issues or send pull requests.
+Feature requests and bug reports are welcome!
+You can report issues or submit pull requests on [GitHub].
 
-You could configure some function in [this page][1], please see [here][5] if you
-need more information.
+You can also configure some features on [this page][1]. See [here][5] for more
+information.
 
 # Nightly Builds
 
-Nightly builds are generated automatically from the latest source code, so they
+Nightly builds are automatically generated from the latest source code, so they
 include the latest site fixes before the next release.
-They are not reviewed as a release and **may break things**.
-If something goes wrong, please report it on [GitHub] with the nightly version
-number.
+However, they are not reviewed like official releases and **may break things**.
+If you encounter any issues, please report them on [GitHub] and include the
+nightly build's version number.
 
-* A nightly build replaces the release build in your userscript manager, as
-  they share the same name.
-* Once installed, it keeps updating from the nightly channel, even after a new
-  release is published.
-* To go back to release builds, uninstall the nightly build first, then install
-  the release build.
+* Installing a nightly build replaces the release build in your userscript
+  manager, because both builds share the same name.
+* Once installed, the nightly build keeps receiving updates from the nightly
+  channel, even after a new release becomes available.
+* To switch back to release builds, uninstall the nightly build first, then
+  install the release build.
 
 # Supported Platforms
 
-Please check [this page][2] to see if your browser/userscript manager is
-supported.
+Please see [this page][2] for a list of supported browsers and userscript
+managers.
 
 # Supported Sites
 
